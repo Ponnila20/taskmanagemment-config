@@ -1,0 +1,7 @@
+server:
+  port: 8081
+
+aws:
+  dynamodb:
+    region: us-east-1
+    table-name: TaskTable
