@@ -1,0 +1,16 @@
+server:
+  port: 8085
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: userstory-service
+          uri: lb://USERSTORY-SERVICE
+          predicates:
+            - Path=/api/user-stories/**
+
+        - id: task-service
+          uri: lb://TASK-SERVICE
+          predicates:
+            - Path=/api/tasks/**
